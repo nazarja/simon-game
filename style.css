@@ -1,0 +1,269 @@
+/*******************************
+    Google Fonts
+ *******************************/
+
+ @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald|VT323');
+
+
+/*******************************
+    General
+ *******************************/
+
+ body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dark_wood.png");
+    /* background: url('pow-star.png'); */
+    color: #283034;
+ }
+
+
+/*******************************
+    Board Design
+ *******************************/
+
+ .base {
+     height: 470px;
+     width: 470px;
+     border: 30px solid #283034;
+     border-radius: 50%;
+     margin: auto;
+     margin-top: 20vh;
+     background: #fff;
+     box-shadow: 0 0 25px #000;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .pad {
+    overflow: hidden; 
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin: -1px;
+    padding: 0;
+    box-shadow: inset 0px 0px 20px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+ }
+
+ #green {
+    background-color: #45B09C;
+    border-top-left-radius: 100%;
+ }
+
+ #red {
+    background-color: #D42F2F;
+    border-top-right-radius: 100%;
+ }
+
+ #yellow {
+    background-color: #EFC94C;
+    border-bottom-left-radius: 100%;
+ }
+
+ #blue {
+     background-color: #2A96BD;
+     border-bottom-right-radius: 100%;
+ }
+
+ #center {
+     position: absolute;
+     margin: auto;
+     top: 24%;
+     left: 24%;
+     height: 45%;
+     width: 45%;
+     background-color: #F3ECC0;
+     border: 20px solid #283034;
+     border-radius: 50%;
+     z-index: 2;
+     box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2),
+                        inset 0px 0px 10px 10px rgba(168, 163, 134, 0.3);
+ }
+
+ .border {
+    background-color: #283034;
+    height: 20px;
+    width: 480px;
+    position: absolute;
+    z-index: 1; 
+ }
+
+ #borderVertical {
+    top: 48%;
+    left: -0.7%;
+    transform: rotate(90deg);
+ }
+
+ #borderHorizontal {
+    top: 48%;
+    left: 5;
+ }
+
+ /*******************************
+    Center Board Design
+ *******************************/
+ 
+ #title {
+     position: relative;
+     top: 15%;
+     left: 11%;
+     font-family: 'Alfa Slab One', cursive;
+     font-size: 3rem;
+ }
+
+ #reg {
+    position: relative;
+    font-family: 'Alfa Slab One', cursive;
+    display: inline-block;
+    font-size: 1rem;
+    top: 5%;
+    left: 9%;
+ }
+
+ .inlineBlock {
+     display: inline-block;
+     position: relative;
+     margin: 0px;
+ }
+
+ #countDisplay {
+     height: 15%;
+     width: 25%;
+     position: relative;
+     top: 16%;
+     left: 15%;
+     background-color: #3D0810;
+     border: 3px solid #283034;
+     border-radius: 10px;
+     box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+ }
+
+ #count {
+     position: relative;
+     font-family: 'VT323', monospace; 
+     right: -28%;
+     font-size: 2rem;
+     color: #922334;
+     margin: auto;
+ }
+
+ .btn {
+    border: 5px solid #283034;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+    cursor: pointer;
+    top: 19%;
+ }
+
+ .btn:active {
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.8);
+    transform: translateY(1px);
+ }
+
+ #start {
+    background-color: #F73955;
+    left: 22%;
+ }
+
+ #strict {
+     background-color: #2A96BD;
+     left: 27%;
+ }
+
+ #strictLight {
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    border-radius: 50%;
+    border: 2px solid #283034;
+    background-color: #3D0810;
+    height: 8px;
+    width: 8px;
+ }
+
+    .font {
+        position: absolute;
+        top: 67%;
+        font-family: 'Oswald', sans-serif; 
+    }
+
+    .font1  {
+        left: 40%;
+    }
+
+    .font2 {
+        left: 69%;
+    }
+
+    .font3 {
+        left: 80%;
+    }
+
+    #on-off {
+        top: 44%;
+        left: -31%;
+        font-family: 'Oswald', sans-serif; 
+        font-size: .8rem;
+    }
+
+    switch input { 
+    display: none;
+}
+
+label {
+    display: inline-block;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    margin-bottom: -5.5px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2A96BD;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #F73955;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.slider.round {
+    border-radius: 25.5px;
+}
+
+.slider.round:before {
+    border-radius: 50%; 
+}
